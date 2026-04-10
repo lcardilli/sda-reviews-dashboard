@@ -16,11 +16,15 @@ const apify = new ApifyClient({ token: APIFY_TOKEN });
 async function scrapeLocation(location) {
   console.log(`Scraping: ${location.name} (${location.kgmid})`);
 
-  // Build a /maps/search/ URL — the only format this actor reliably accepts.
-  // We search by firm name + city and cap results to 1 so we always hit the
-  // correct location rather than a list of places.
-  const query = encodeURIComponent(`Stephen Durbin & Associates ${location.name}`);
-  const mapsUrl = `https://www.google.com/maps/search/${query}/`;
+  // Use a direct Maps URL (maps.app.goo.gl) if available — this guarantees
+  // we hit the exact GBP. Fall back to name-based search if not yet set.
+  let mapsUrl;
+  if (location.directUrl) {
+    mapsUrl = location.directUrl;
+  } else {
+    const query = encodeURIComponent(`Stephen Durbin & Associates ${location.name}`);
+    mapsUrl = `https://www.google.com/maps/search/${query}/`;
+  }
 
   const run = await apify.actor('compass/google-maps-reviews-scraper').call({
     startUrls: [{ url: mapsUrl }],
