@@ -8,8 +8,8 @@ const GMAIL_APP_PASSWORD = process.env.GMAIL_APP_PASSWORD;
 const RECIPIENT = 'lcardilli@theinfluenceagency.com';
 
 if (!GMAIL_USER || !GMAIL_APP_PASSWORD) {
-  console.error('Missing GMAIL_USER or GMAIL_APP_PASSWORD in .env');
-  process.exit(1);
+  console.log('GMAIL_USER / GMAIL_APP_PASSWORD not set — skipping email notification.');
+  process.exit(0);
 }
 
 function starsHtml(rating) {

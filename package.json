@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Google Reviews dashboard for Stephen Durbin & Associates",
   "scripts": {
-    "scrape": "node scraper.js && node notify.js"
+    "scrape": "node scraper.js",
+    "notify": "node notify.js",
+    "scrape:notify": "node scraper.js && node notify.js"
   },
   "dependencies": {
     "apify-client": "^2.9.3",
