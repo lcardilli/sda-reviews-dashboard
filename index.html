@@ -11,21 +11,22 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy: #1a2332;
-      --navy-light: #243148;
-      --gold: #c9a84c;
-      --gold-light: #e8c96a;
+      --navy: #1a3a5c;
+      --navy-light: #22497a;
+      --gold: #c9a227;
+      --gold-light: #dbb93a;
       --white: #ffffff;
-      --body-bg: #f4f6f9;
-      --card-bg: #ffffff;
+      --body-bg: #ffffff;
+      --card-bg: #e8f0f7;
+      --light-blue: #e8f0f7;
       --text: #2c2c2c;
       --text-muted: #6b7280;
-      --border: #e5e7eb;
+      --border: #d0dce8;
       --amber: #f59e0b;
       --amber-bg: #fffbeb;
       --radius: 10px;
-      --shadow: 0 2px 12px rgba(26,35,50,0.08);
-      --shadow-hover: 0 6px 24px rgba(26,35,50,0.14);
+      --shadow: 0 2px 12px rgba(26,58,92,0.08);
+      --shadow-hover: 0 6px 24px rgba(26,58,92,0.16);
     }
 
     html { scroll-behavior: smooth; }
@@ -70,7 +71,7 @@
     .header-divider {
       width: 1px;
       height: 32px;
-      background: rgba(201,168,76,0.5);
+      background: rgba(201,162,39,0.5);
     }
     .header-title {
       font-family: 'Playfair Display', serif;
@@ -91,7 +92,7 @@
       margin-top: 2px;
     }
     .header-refresh {
-      background: rgba(201,168,76,0.15);
+      background: rgba(201,162,39,0.15);
       border: 1px solid var(--gold);
       color: var(--gold);
       padding: 7px 18px;
@@ -191,7 +192,7 @@
     .search-input:focus {
       outline: none;
       border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+      box-shadow: 0 0 0 3px rgba(201,162,39,0.15);
     }
     .search-input::placeholder { color: #aaa; }
 
@@ -286,7 +287,7 @@
     .star-half { color: var(--gold); font-size: 15px; position: relative; }
     .stars-bar-track {
       height: 4px;
-      background: #e5e7eb;
+      background: var(--border);
       border-radius: 2px;
       width: 100px;
       overflow: hidden;
@@ -402,7 +403,7 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 18px 20px;
-      background: #fafafa;
+      background: var(--white);
       transition: border-color 0.2s;
     }
     .review-card:hover { border-color: var(--gold); }
