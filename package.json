@@ -1,0 +1,13 @@
+{
+  "name": "sda-reviews-dashboard",
+  "version": "1.0.0",
+  "description": "Google Reviews dashboard for Stephen Durbin & Associates",
+  "scripts": {
+    "scrape": "node scraper.js && node notify.js"
+  },
+  "dependencies": {
+    "apify-client": "^2.9.3",
+    "dotenv": "^16.4.5",
+    "nodemailer": "^6.9.14"
+  }
+}

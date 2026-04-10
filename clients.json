@@ -1,0 +1,13 @@
+[
+  { "name": "Burlington", "address": "5500 North Service Rd, Suite 903", "kgmid": "/g/11dz_172mp" },
+  { "name": "Toronto", "address": "1200 Bay St, Suite 1201", "kgmid": "/g/11dz0gg2v5" },
+  { "name": "Hamilton", "address": "1 Hunter Street East", "kgmid": "/g/11ss1mdt31" },
+  { "name": "Ottawa", "address": "1980 Ogilvie Rd, Suite 208", "kgmid": "/g/11b7xppdh6" },
+  { "name": "Oakville", "address": "1300 Cornwall Rd, Suite 201-204", "kgmid": "/g/11g8wyb64b" },
+  { "name": "Mississauga", "address": "55 Village Centre Pl, Suite 200", "kgmid": "/g/11yz8m3r8h" },
+  { "name": "Markham-Thornhill", "address": "55 Commerce Valley Dr W, Suite 502", "kgmid": "/g/11xs1yn9bh" },
+  { "name": "Scarborough", "address": "1225 Kennedy Rd, Suite 2000", "kgmid": "/g/11xkytqb4s" },
+  { "name": "Barrie", "address": "92 Caplan Avenue", "kgmid": "/g/11z15q1_s5" },
+  { "name": "Kitchener-Waterloo", "address": "290 King Street East", "kgmid": "/g/11n4vx85pk" },
+  { "name": "Vaughan", "address": "3300 Hwy 7, Suite 600", "kgmid": "/g/11yffzg76s" }
+]
