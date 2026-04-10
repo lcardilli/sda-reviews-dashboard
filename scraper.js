@@ -24,7 +24,7 @@ async function scrapeLocation(location) {
 
   const run = await apify.actor('compass/google-maps-reviews-scraper').call({
     startUrls: [{ url: mapsUrl }],
-    maxReviews: 50,
+    maxReviews: 500,
     maxCrawledPlacesPerSearch: 1,
     reviewsSort: 'newest',
     language: 'en',
