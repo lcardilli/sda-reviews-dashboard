@@ -660,6 +660,7 @@
 <script>
   // ── State ──────────────────────────────────────────────────────────────────
   let allReviews = [];
+  let allClients = [];
   let activeLocation = null;
 
   const googleUrls = {
@@ -770,10 +771,10 @@
     const filtered = filterReviews(allReviews);
     const byLoc = groupByLocation(filtered);
 
-    // If searching/filtering, show matching locations only
+    // If searching/filtering, show matching locations only; otherwise show all known locations
     const locationNames = searchQuery || activeStarFilter !== 'all'
       ? Object.keys(byLoc)
-      : Object.keys(groupByLocation(allReviews));
+      : allClients.map(c => c.name);
 
     if (locationNames.length === 0) {
       grid.innerHTML = '<div class="no-results">No reviews match your current filters.</div>';
@@ -783,7 +784,7 @@
     grid.innerHTML = locationNames.map(locName => {
       const locReviews = (byLoc[locName] || []);
       const allLocReviews = groupByLocation(allReviews)[locName] || [];
-      const address = allLocReviews[0]?.address || '';
+      const address = allLocReviews[0]?.address || allClients.find(c => c.name === locName)?.address || '';
       const rated = allLocReviews.filter(r => r.rating != null);
       const avgRating = rated.length ? avg(rated.map(r => r.rating)) : 0;
       const totalCount = allLocReviews.length;
@@ -953,11 +954,15 @@
   // ── Load Data ──────────────────────────────────────────────────────────────
   async function loadReviews() {
     try {
-      const res = await fetch('reviews.json?_=' + Date.now());
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      allReviews = await res.json();
+      const [reviewsRes, clientsRes] = await Promise.all([
+        fetch('reviews.json?_=' + Date.now()),
+        fetch('clients.json?_=' + Date.now()),
+      ]);
+      if (!reviewsRes.ok) throw new Error(`HTTP ${reviewsRes.status}`);
+      allReviews = await reviewsRes.json();
+      if (clientsRes.ok) allClients = await clientsRes.json();
     } catch (err) {
-      console.warn('Could not load reviews.json:', err.message);
+      console.warn('Could not load data:', err.message);
       allReviews = [];
     }
 
