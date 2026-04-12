@@ -7,7 +7,7 @@
   { "name": "Mississauga",        "address": "55 Village Centre Pl, Suite 200",     "kgmid": "/g/11dz0gg2v5",  "directUrl": "https://maps.app.goo.gl/AFb9rKAH5iENkhQLA" },
   { "name": "Scarborough",        "address": "1225 Kennedy Rd, Suite 2000",         "kgmid": "/g/11xkytqb4s",  "directUrl": "https://maps.app.goo.gl/umg5Y3YzvJ75ED9v7" },
   { "name": "Barrie",             "address": "92 Caplan Avenue",                    "kgmid": "/g/11yz8m3r8h",  "directUrl": "https://maps.app.goo.gl/CNoC8wQJN6MDfxym6" },
-  { "name": "Kitchener-Waterloo", "address": "290 King Street East",                "kgmid": "/g/11n4vx85pk",  "directUrl": "" },
+  { "name": "Kitchener-Waterloo", "address": "290 King Street East",                "kgmid": "/g/11n4vx85pk",  "directUrl": "", "skip": true },
   { "name": "Vaughan",            "address": "3300 Hwy 7, Suite 600",               "kgmid": "/g/11yffzg76s",  "directUrl": "https://maps.app.goo.gl/XeZGw6pDYvzycs4N7" },
-  { "name": "Norfolk",            "address": "",                                    "kgmid": "/g/11z15q1_s5",  "directUrl": "" }
+  { "name": "Norfolk",            "address": "",                                    "kgmid": "/g/11z15q1_s5",  "directUrl": "", "skip": true }
 ]

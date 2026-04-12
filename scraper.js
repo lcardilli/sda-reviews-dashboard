@@ -55,6 +55,10 @@ async function main() {
   const allReviews = [];
 
   for (const location of clients) {
+    if (location.skip) {
+      console.log(`Skipping: ${location.name} (no directUrl, SAB with 0 reviews)`);
+      continue;
+    }
     try {
       const reviews = await scrapeLocation(location);
       console.log(`  -> Got ${reviews.length} reviews for ${location.name}`);
