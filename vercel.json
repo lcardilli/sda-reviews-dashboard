@@ -8,12 +8,20 @@
     {
       "src": "reviews.json",
       "use": "@vercel/static"
+    },
+    {
+      "src": "clients.json",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/reviews.json",
       "dest": "/reviews.json"
+    },
+    {
+      "src": "/clients.json",
+      "dest": "/clients.json"
     },
     {
       "src": "/(.*)",
