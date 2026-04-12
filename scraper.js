@@ -36,7 +36,9 @@ async function scrapeLocation(location) {
 
   const { items } = await apify.dataset(run.defaultDatasetId).listItems();
 
-  return items.map((item) => ({
+  return items
+    .filter((item) => (item.reviewId || item.id) && (item.stars || item.rating))
+    .map((item) => ({
     location: location.name,
     address: location.address,
     kgmid: location.kgmid,

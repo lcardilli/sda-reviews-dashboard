@@ -234,32 +234,6 @@
     "responseFromOwnerDate": null
   },
   {
-    "location": "Ottawa",
-    "address": "1980 Ogilvie Rd, Suite 208",
-    "kgmid": "/g/11xs1yn9bh",
-    "reviewId": null,
-    "reviewerName": "Anonymous",
-    "reviewerPhotoUrl": null,
-    "rating": null,
-    "text": "",
-    "publishedAtDate": null,
-    "responseFromOwnerText": null,
-    "responseFromOwnerDate": null
-  },
-  {
-    "location": "Oakville",
-    "address": "1300 Cornwall Rd, Suite 201-204",
-    "kgmid": "/g/11ss1mdt31",
-    "reviewId": null,
-    "reviewerName": "Anonymous",
-    "reviewerPhotoUrl": null,
-    "rating": null,
-    "text": "",
-    "publishedAtDate": null,
-    "responseFromOwnerText": null,
-    "responseFromOwnerDate": null
-  },
-  {
     "location": "Mississauga",
     "address": "55 Village Centre Pl, Suite 200",
     "kgmid": "/g/11dz0gg2v5",
@@ -334,45 +308,6 @@
     "rating": 1,
     "text": "Terrible service takes 20 minutes to even get an answer from them and the lawyer I was set up with was just awful, told I wanted it to be done with as fast as possible and 3 months has gone by and nothing has been done but I've been billed multiple times\nWould never go back here",
     "publishedAtDate": "2018-12-17T20:47:18.182Z",
-    "responseFromOwnerText": null,
-    "responseFromOwnerDate": null
-  },
-  {
-    "location": "Scarborough",
-    "address": "1225 Kennedy Rd, Suite 2000",
-    "kgmid": "/g/11xkytqb4s",
-    "reviewId": null,
-    "reviewerName": "Anonymous",
-    "reviewerPhotoUrl": null,
-    "rating": null,
-    "text": "",
-    "publishedAtDate": null,
-    "responseFromOwnerText": null,
-    "responseFromOwnerDate": null
-  },
-  {
-    "location": "Barrie",
-    "address": "92 Caplan Avenue",
-    "kgmid": "/g/11yz8m3r8h",
-    "reviewId": null,
-    "reviewerName": "Anonymous",
-    "reviewerPhotoUrl": null,
-    "rating": null,
-    "text": "",
-    "publishedAtDate": null,
-    "responseFromOwnerText": null,
-    "responseFromOwnerDate": null
-  },
-  {
-    "location": "Vaughan",
-    "address": "3300 Hwy 7, Suite 600",
-    "kgmid": "/g/11yffzg76s",
-    "reviewId": null,
-    "reviewerName": "Anonymous",
-    "reviewerPhotoUrl": null,
-    "rating": null,
-    "text": "",
-    "publishedAtDate": null,
     "responseFromOwnerText": null,
     "responseFromOwnerDate": null
   }
