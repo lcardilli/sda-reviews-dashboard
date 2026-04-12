@@ -753,7 +753,7 @@
   // ── Render Summary ─────────────────────────────────────────────────────────
   function renderSummary() {
     const byLoc = groupByLocation(allReviews);
-    const locations = Object.keys(byLoc).length;
+    const locations = allClients.length || Object.keys(byLoc).length;
     const total = allReviews.length;
     const rated = allReviews.filter(r => r.rating != null);
     const overallAvg = rated.length ? avg(rated.map(r => r.rating)) : 0;
