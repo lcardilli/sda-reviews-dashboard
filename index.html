@@ -772,9 +772,18 @@
     const byLoc = groupByLocation(filtered);
 
     // If searching/filtering, show matching locations only; otherwise show all known locations
-    const locationNames = searchQuery || activeStarFilter !== 'all'
+    const allByLoc = groupByLocation(allReviews);
+    const locationNames = (searchQuery || activeStarFilter !== 'all'
       ? Object.keys(byLoc)
-      : allClients.map(c => c.name);
+      : allClients.map(c => c.name)
+    ).sort((a, b) => {
+      const ratedA = (allByLoc[a] || []).filter(r => r.rating != null);
+      const ratedB = (allByLoc[b] || []).filter(r => r.rating != null);
+      if (!ratedA.length && !ratedB.length) return 0;
+      if (!ratedA.length) return 1;
+      if (!ratedB.length) return -1;
+      return avg(ratedB.map(r => r.rating)) - avg(ratedA.map(r => r.rating));
+    });
 
     if (locationNames.length === 0) {
       grid.innerHTML = '<div class="no-results">No reviews match your current filters.</div>';
