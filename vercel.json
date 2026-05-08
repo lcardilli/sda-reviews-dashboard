@@ -1,36 +1,11 @@
 {
-  "version": 2,
-  "builds": [
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "headers": [
     {
-      "src": "index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "reviews.json",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "clients.json",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "headers": { "X-Robots-Tag": "noindex, nofollow" },
-      "continue": true
-    },
-    {
-      "src": "/reviews.json",
-      "dest": "/reviews.json"
-    },
-    {
-      "src": "/clients.json",
-      "dest": "/clients.json"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
     }
   ]
 }
