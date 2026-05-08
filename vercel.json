@@ -16,6 +16,11 @@
   ],
   "routes": [
     {
+      "src": "/(.*)",
+      "headers": { "X-Robots-Tag": "noindex, nofollow" },
+      "continue": true
+    },
+    {
       "src": "/reviews.json",
       "dest": "/reviews.json"
     },
